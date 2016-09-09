@@ -1,69 +1,76 @@
-html {
-    background-color: #e6e9e9;
-    background-image: -webkit-linear-gradient(270deg,rgb(230,233,233) 0%,rgb(216,221,221) 100%);
-    background-image: linear-gradient(270deg,rgb(230,233,233) 0%,rgb(216,221,221) 100%);
-    -webkit-font-smoothing: antialiased;
+.top-bar {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.bottom-bar {
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 body {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  padding-top: 70px;
+}
+
+.btn-default {
+  background-color: #d3d3d3;
+  color: #778899;
+}
+
+.img-responsive {
     margin: 0 auto;
-    padding: 2em 2em 4em;
-    max-width: 800px;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.5em;
-    color: #545454;
-    background-color: #ffffff;
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.06);
 }
 
-h1, h2, h3, h4, h5, h6 {
-    color: #222;
-    font-weight: 600;
-    line-height: 1.3em;
+.text-caption {
+  color: #778899;
 }
 
-h2 {
-    margin-top: 1.3em;
+.object-border {
+  border-style: solid;
+  border-color: #2f4f4f;
+  border-width: 1px;
+  border-radius: 5px;
 }
 
-a {
-    color: #0083e8;
+.text-bottom {
+  position: 0;
+  bottom: 0;
 }
 
-b, strong {
-    font-weight: 600;
+.img-background {
+  background-image: url("https://hd.unsplash.com/photo-1458724029936-2cc6ee38f5ef");
+  background-size:cover;
+  background-repeat:no-repeat;
 }
 
-samp {
-    display: none;
+.col-centered{
+float: none;
+margin: 0 auto;
 }
 
-img {
-    -webkit-animation: colorize 2s cubic-bezier(0, 0, .78, .36) 1;
-    animation: colorize 2s cubic-bezier(0, 0, .78, .36) 1;
-    background: transparent;
-    border: 10px solid rgba(0, 0, 0, 0.12);
-    border-radius: 4px;
-    display: block;
-    margin: 1.3em auto;
-    max-width: 95%;
+.row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-@-webkit-keyframes colorize {
-    0% {
-        -webkit-filter: grayscale(100%);
-    }
-    100% {
-        -webkit-filter: grayscale(0%);
-    }
+.row > [class*='col-'] {
+  display: flex;
+  flex-direction: column;
 }
 
-@keyframes colorize {
-    0% {
-        filter: grayscale(100%);
-    }
-    100% {
-        filter: grayscale(0%);
-    }
+.grey-background {
+  background-color: #d3d3d3;
+}
+
+.white-background {
+  background-color: white;
+}
+
+.vertical-buffer {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
