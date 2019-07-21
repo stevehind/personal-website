@@ -13,6 +13,10 @@ def main():
 def showDogMerch():
     return render_template('dog-merch.html')
 
+@app.route('/#find-me')
+def showFindMe():
+    return render_template('index.html#find-me')
+
 # Run the app
 if __name__ == "__main__":
     app.run()
