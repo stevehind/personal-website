@@ -17,6 +17,10 @@ def showDogMerch():
 def showFindMe():
     return render_template('index.html#find-me')
 
+@app.route('/terms')
+def showTerms():
+    return render_template('terms.html')
+
 # Run the app
 if __name__ == "__main__":
     app.run()
