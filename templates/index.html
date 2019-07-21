@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>stevehind.me</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>
+  body {
+    font: 20px "Helvetica Neue", sans-serif;
+    line-height: 1.8;
+    color: #f5f6f7;
+  }
+  p {font-size: 16px;}
+  .margin {margin-bottom: 45px;}
+  .bg-1 {
+    background-color: #1abc9c; /* Green */
+    color: #ffffff;
+  }
+  .bg-2 {
+    background-color: #474e5d; /* Dark Blue */
+    color: #ffffff;
+  }
+  .bg-3 {
+    background-color: #ffffff; /* White */
+    color: #555555;
+  }
+  .bg-4 {
+    background-color: #2f2f2f; /* Black Gray */
+    color: #fff;
+  }
+  .container-fluid {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  .navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    letter-spacing: 5px;
+  }
+  .navbar-nav  li a:hover {
+    color: #1abc9c !important;
+  }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">stevehind.me</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#find-me">find-me</a></li>
+        <li><a href="{{ url_for('showDogMerch') }}">dog-merch</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Headshot and intro -->
+<div class="container-fluid bg-1 text-center">
+  <h3 class="margin">Steve's jankey website</h3>
+  <img src="static/headshot-Jun-2016.jpg" class="img-responsive img-circle margin" style="display:inline" alt="Me!" width="200" height="200">
+  <p>^ This is me. Hi!</p>
+  <p>This is a testbed for me to learn and practice web development.</p>
+</div>
+
+<!-- Links to other work -->
+<div class="container-fluid bg-3 text-center" name="find-me">
+  <h3>Find me on...</h3><br>
+  <p class="margin">"How do make these icons smaller!? They're enormous!!"</p>
+  <div class="row">
+    <div class="col-sm-3">
+      <a href = "http://www.linkedin.com/in/shind">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
+           class="img-responsive margin"
+           style="width:100%"
+           alt="LinkedIn"></a>
+    </div>
+    <div class="col-sm-3">
+      <a href = "http://www.github.com/stevehind">
+        <img src="static/GitHub-Mark-120px-plus.png"
+           class="img-responsive margin"
+           style="width:100%"
+           alt="Github"></a>
+    </div>
+    <div class="col-sm-3">
+      <a href = "http://www.twitter.com/stevehind">
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9f/Twitter_bird_logo_2012.svg/1259px-Twitter_bird_logo_2012.svg.png"
+           class="img-responsive margin"
+           style="width:100%"
+           alt="Twitter"></a>
+    </div>
+    <div class="col-sm-3">
+      <a href = "http://www.medium.com/@stevehind">
+        <img src="http://45royale.com/wp-content/uploads/medium.png"
+           class="img-responsive margin"
+           style="width:100%"
+           alt="Medium"></a>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="container-fluid bg-4 text-center">
+  <p class="text-muted">Copyright Steve Hind 2019. <a href="mailto:steve.hind+website@gmail.com">Contact</a>.</p>
+</footer>
+
+</body>
+</html>
