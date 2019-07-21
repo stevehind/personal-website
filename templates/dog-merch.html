@@ -73,6 +73,24 @@
 <!-- Body -->
 <div class="container-fluid bg-2 text-center">
     <p>Buy a 2020 wall calendar of Sydney and Sesil's dumb faces</p>
+    <p>Enter your shipping details below, and click checkout to buy!</p>
+
+    <form class="form-horizontal"> <!--action="/buy" method="post">-->
+            <input name="items" type="hidden" value="{{ items }}" />
+            <div class="panel-body">
+                    {% for field in cardholder_fields %}
+                    <div class="form-group">
+                        <div class="col-3 col-sm-12">
+                            <label class="form-label" for="cardholder-{{ field[0] }}">{{ field[0] }}</label>
+                        </div>
+                        <div class="col-9 col-sm-12">
+                            <input class="form-input" type="text" name="{{ field[0] }}" id="cardholder-{{ field[0] }}"
+                                placeholder="{{ field[1] }}">
+                        </div>
+                    </div>
+                    {% endfor %}
+
+            </div>
 
     <!-- Load Stripe.js on your website. -->
     <script src="https://js.stripe.com/v3"></script>

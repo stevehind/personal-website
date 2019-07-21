@@ -1,4 +1,4 @@
-from flask import Flask, render_template, url_for
+from flask import Flask, render_template, url_for, request
 
 # Name the app
 app = Flask(__name__)
@@ -11,7 +11,25 @@ def main():
 
 @app.route('/dog-merch/')
 def showDogMerch():
-    return render_template('dog-merch.html')
+    items = request.query_string
+    cardholder_fields = [
+        ('name',
+         'Dog Love'),
+        ('address',
+         '420 Dogg Ave'),
+        ('city',
+         'Poochy'),
+        ('state',
+         'CA'),
+        ('zip',
+         '94110'),
+        ('email',
+         'dogs@sydney-and-sesil.com')]
+    return render_template('dog-merch.html',
+                           #session_data=session,
+                           cardholder_fields=cardholder_fields,
+                           items=items,
+                           cart_headline_image_url='')
 
 @app.route('/#find-me')
 def showFindMe():
