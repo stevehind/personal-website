@@ -39,6 +39,15 @@ def showFindMe():
 def showTerms():
     return render_template('terms.html')
 
+@app.route('/success')
+def showSuccess():
+    return render_template('success.html')
+
+@app.route('/failure')
+def showFailure():
+    return render_template('failure.html')
+
+
 # Run the app
 if __name__ == "__main__":
     app.run()
